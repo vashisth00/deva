@@ -10,14 +10,16 @@ function getParameters() {
     if (pair[0] == "light_mode=" || pair[1] == "1") {
       document.getElementById("demo").className = "white-mode";
       document.getElementById("light-image1").src =
-        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Festivals/lanternSvgrepoCom.png";
+        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Festivals/lanternSvgrepoCom-dark.png";
+      document.getElementById("light-image2").src =
+        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Thumbs+up/invalidName-dark.png";
     } else if (pair[1] == "0") {
       document.getElementById("demo").className = "dark";
-  document.getElementById("light-image1").src =
-        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Festivals/lanternSvgrepoCom.png";
-  document.getElementById("light-image2").src =
-        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Thumbs+up/invalidName-dark.png";
 
+      document.getElementById("light-image1").src =
+        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Festivals/lanternSvgrepoCom.png";
+      document.getElementById("light-image2").src =
+        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Thumbs+up/invalidName.png";
     }
   }
 }
