@@ -32,9 +32,30 @@
     <button onclick="getParameters()">
         Get URL parameters
     </button>
+    <button onclick="getParameter()">
+        Get URL old
+    </button>
       
     <script>
         function getParameters() {
+            let urlString =
+"https://d1tf573zhz3zzy.cloudfront.net/data/content/html/generated/ATTRACTION/attr_transport/ea3a3172-1b2f-49a4-a47c-8c3b2af84b00_attr_transport.html?light_mode=1=";
+          
+            let paramString = urlString.split('?')[1];
+              
+            let params_arr = paramString.split('&');
+          
+            for (let i = 0; i < params_arr.length; i++) {
+                  
+                let pair = params_arr[i].split('=');
+                  
+                console.log("Key is:" + pair[0]);
+                console.log("Value is:" + pair[1]);
+            }
+        } 
+    </script>
+    <script>
+        function getParameter() {
             let urlString =
 "https://www.example.com/login.php?a=GeeksForGeeks&b=500&c=Hello Geeks";
           
