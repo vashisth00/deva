@@ -1,124 +1,105 @@
 <!DOCTYPE html>
 <html>
-  
-<head>
-    <title>
-        How To Get URL Parameters
-        using JavaScript?
-    </title>
-</head>
-  
-<body>
-      
-    <b>
-        How To Get URL Parameters
-        With JavaScript?
-    </b>
-      
-    <p>
-        The url used is: 
-        https://www.example.com/login.php?
-        a=GeeksForGeeks&b=500&c=Hello Geeks
-    </p>
-      
-    <p>
-        Click on the button to get the
-        url parameters in the console.
-    </p>
-      
-    <button onclick="getParameters()">
-        Get URL parameters
-    </button>
-    <button onclick="getParameter()">
-        Get URL old
-    </button>
-      
+  <head>
+    <title>How To Get URL Parameters using JavaScript?</title>
+  </head>
+
+  <body onload="getParameters() ">
+    <p id="demo" onload="getParameters() ">No Light Mode</p>
+
+    <p id="demo1" onload="getParameters() ">No Light Mode</p>
+
     <script>
-        function getParameters() {
-            let urlString =window.location.href;
-          
-            let paramString = urlString.split('?')[1];
-              
-            let params_arr = paramString.split('&');
-          
-            for (let i = 0; i < params_arr.length; i++) {
-                  
-                let pair = params_arr[i].split('=');
-                  
-                console.log("Key is:" + pair[0]);
-                console.log("Value is:" + pair[1]);
-            }
-        } 
-    </script>
-    <script>
-        function getParameter() {
-            let urlString =
-"https://www.example.com/login.php?a=GeeksForGeeks&b=500&c=Hello Geeks";
-          
-            let paramString = urlString.split('?')[1];
-              
-            let params_arr = paramString.split('&');
-          
-            for (let i = 0; i < params_arr.length; i++) {
-                  
-                let pair = params_arr[i].split('=');
-                  
-                console.log("Key is:" + pair[0]);
-                console.log("Value is:" + pair[1]);
-            }
-        } 
+      function getParameters() {
+        let urlString = window.location.href;
 
-function getAllUrlParams(url) {
-  var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
-  var obj = {};
+        let paramString = urlString.split("?")[1];
 
-  if (queryString) {
-    queryString = queryString.split('#')[0];
-    var arr = queryString.split('&');
+        let params_arr = paramString.split("&");
 
-    for (var i = 0; i < arr.length; i++) {
-      var a = arr[i].split('=');
-      var paramName = a[0];
-      var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+        for (let i = 0; i < params_arr.length; i++) {
+          let pair = params_arr[i].split("=");
 
-      paramName = paramName.toLowerCase();
-      if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
-
-      if (paramName.match(/\[(\d+)?\]$/)) {
-        var key = paramName.replace(/\[(\d+)?\]/, '');
-        if (!obj[key]) obj[key] = [];
-
-        if (paramName.match(/\[\d+\]$/)) {
-          var index = /\[(\d+)\]/.exec(paramName)[1];
-          obj[key][index] = paramValue;
-        } else {
-          obj[key].push(paramValue);
-        }
-      } else {
-        if (!obj[paramName]) {
-          obj[paramName] = paramValue;
-        } else if (obj[paramName] && typeof obj[paramName] === 'string'){
-          obj[paramName] = [obj[paramName]];
-          obj[paramName].push(paramValue);
-        } else {
-          obj[paramName].push(paramValue);
+          console.log("Key is:" + pair[0]);
+          console.log("Value is:" + pair[1]);
+          document.getElementById("demo").innerHTML = pair[1];
+          document.getElementById("demo1").innerHTML = pair[0];
         }
       }
-    }
-  }
-
-  return obj;
-}
-
-var params = document.getElementById('params');
-var results = document.getElementById('results');
-
-document.querySelector('input').addEventListener('keyup', function() {
-  params.innerText = this.value;
-  results.innerText = JSON.stringify(getAllUrlParams("http://test.com/?" + this.value), null, 2);
-});
-
     </script>
-</body>
-  
+    <script>
+      function getParameter() {
+        let urlString =
+          "https://www.example.com/login.php?a=GeeksForGeeks&b=500&c=Hello Geeks";
+
+        let paramString = urlString.split("?")[1];
+
+        let params_arr = paramString.split("&");
+
+        for (let i = 0; i < params_arr.length; i++) {
+          let pair = params_arr[i].split("=");
+
+          console.log("Key is:" + pair[0]);
+          console.log("Value is:" + pair[1]);
+        }
+      }
+
+      function getAllUrlParams(url) {
+        var queryString = url
+          ? url.split("?")[1]
+          : window.location.search.slice(1);
+        var obj = {};
+
+        if (queryString) {
+          queryString = queryString.split("#")[0];
+          var arr = queryString.split("&");
+
+          for (var i = 0; i < arr.length; i++) {
+            var a = arr[i].split("=");
+            var paramName = a[0];
+            var paramValue = typeof a[1] === "undefined" ? true : a[1];
+
+            paramName = paramName.toLowerCase();
+            if (typeof paramValue === "string")
+              paramValue = paramValue.toLowerCase();
+
+            if (paramName.match(/\[(\d+)?\]$/)) {
+              var key = paramName.replace(/\[(\d+)?\]/, "");
+              if (!obj[key]) obj[key] = [];
+
+              if (paramName.match(/\[\d+\]$/)) {
+                var index = /\[(\d+)\]/.exec(paramName)[1];
+                obj[key][index] = paramValue;
+              } else {
+                obj[key].push(paramValue);
+              }
+            } else {
+              if (!obj[paramName]) {
+                obj[paramName] = paramValue;
+              } else if (obj[paramName] && typeof obj[paramName] === "string") {
+                obj[paramName] = [obj[paramName]];
+                obj[paramName].push(paramValue);
+              } else {
+                obj[paramName].push(paramValue);
+              }
+            }
+          }
+        }
+
+        return obj;
+      }
+
+      var params = document.getElementById("params");
+      var results = document.getElementById("results");
+
+      document.querySelector("input").addEventListener("keyup", function () {
+        params.innerText = this.value;
+        results.innerText = JSON.stringify(
+          getAllUrlParams("http://test.com/?" + this.value),
+          null,
+          2
+        );
+      });
+    </script>
+  </body>
 </html>
