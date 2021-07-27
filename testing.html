@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        How To Get URL Parameters
+        using JavaScript?
+    </title>
+</head>
+  
+<body>
+    <h1 style="color:green;">
+        GeeksForGeeks
+    </h1>
+      
+    <b>
+        How To Get URL Parameters
+        With JavaScript?
+    </b>
+      
+    <p>
+        The url used is: 
+        https://www.example.com/login.php?
+        a=GeeksForGeeks&b=500&c=Hello Geeks
+    </p>
+      
+    <p>
+        Click on the button to get the
+        url parameters in the console.
+    </p>
+      
+    <button onclick="getParameters()">
+        Get URL parameters
+    </button>
+      
+    <script>
+        function getParameters() {
+            let urlString =
+"https://www.example.com/login.php?a=GeeksForGeeks&b=500&c=Hello Geeks";
+          
+            let paramString = urlString.split('?')[1];
+              
+            let params_arr = paramString.split('&');
+          
+            for (let i = 0; i < params_arr.length; i++) {
+                  
+                let pair = params_arr[i].split('=');
+                  
+                console.log("Key is:" + pair[0]);
+                console.log("Value is:" + pair[1]);
+            }
+        } 
+    </script>
+</body>
+  
+</html>
