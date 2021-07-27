@@ -9,9 +9,6 @@
 </head>
   
 <body>
-    <h1 style="color:green;">
-        GeeksForGeeks
-    </h1>
       
     <b>
         How To Get URL Parameters
@@ -38,8 +35,7 @@
       
     <script>
         function getParameters() {
-            let urlString =
-"https://d1tf573zhz3zzy.cloudfront.net/data/content/html/generated/ATTRACTION/attr_transport/ea3a3172-1b2f-49a4-a47c-8c3b2af84b00_attr_transport.html?light_mode=1=";
+            let urlString =window.location.href;
           
             let paramString = urlString.split('?')[1];
               
