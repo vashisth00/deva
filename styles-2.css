@@ -1,0 +1,255 @@
+@import url(//db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display);
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.eot");
+    src: url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.svg#SF Pro Display") format("svg");
+}
+
+
+/** Ultra Light */
+@font-face {
+    font-family: "San Francisco Light";
+    font-weight: 100;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+    font-family: "San Francisco Thin";
+    font-weight: 200;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+    font-family: "San Francisco Reg";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+    font-family: "San Francisco New";
+    font-weight: 400;
+    src: url("http://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/System+San+Francisco+Text+Medium.ttf");
+}
+
+/** Medium */
+@font-face {
+    font-family: "San Francisco Med";
+    font-weight: 500;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+    font-family: "San Francisco Semi";
+    font-weight: 600;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */
+@font-face {
+    font-family: "San Francisco Bold";
+    font-weight: 700;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+
+/* Custom font */
+
+@font-face {
+    font-family: "SF-Pro-Text-Regular";
+    src: url("https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/fonts/SF-Pro-Text-Regular.otf");
+    /* src: url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.svg#SF Pro Display") format("svg"); */
+}
+
+@font-face {
+    font-family: "SF-Pro-Text-Semibold";
+    src: url("https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/fonts/SF-Pro-Text-Semibold.otf");
+    /* src: url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.svg#SF Pro Display") format("svg"); */
+}
+
+.white-mode {
+    width: 300px;
+    height: 100px;
+    background-color: #f3f3f3;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.white-mode > div > .left-text{
+    color: black;
+}
+.white-mode > div > .grid-layout > .grid-right-text{
+    color: black;
+}
+
+.dark {
+    width: 300px;
+    height: 100px;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+span {
+    letter-spacing: 0.6px !important;
+    font-size: 17px;
+    color: white;
+    font-family: "SF-Pro-Text-Regular";
+    line-height: 21px;
+    letter-spacing: -0.27px;
+}
+
+a {
+    font-size: 15px;
+    color: white;
+    font-family: "SF-Pro-Text-Regular";
+    line-height: 21px;
+    letter-spacing: -0.27px;
+    text-decoration: none !important;
+    color: #3E827B;
+}
+
+.linked {
+    color: #3E827B;
+}
+
+.boldT {
+    font-family: "SF-Pro-Text-Semibold";
+}
+
+body {
+    font-family: "SF-Pro-Text-Regular" !important;
+    font-size: 17px;
+    margin: 0 !important;
+    /* border: 1px solid aquamarine; */
+    padding-top: 0px;
+    padding-left: 0px;
+    /* border: 1px solid red; */
+    padding-right: 0px;
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+.left-text {
+    text-align: left;
+    letter-spacing: 0.17px !important;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+
+.grid-left-text {
+    margin-right: 19px;
+    font-size: 15px;
+    text-align: left;
+    float: left;
+}
+
+.grid-right-text {
+    /* margin-right: 19px; */
+    font-size: 15px;
+    text-align: left;
+    float: left;
+}
+
+/* .grid-icons{
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.grid-right-text{
+    margin-right: 19px;
+    font-size: 15px;
+    text-align: left;
+    float: left;
+}
+
+.left-text-bold {
+  font-family: "SF-Pro-Text-Semibold";
+  text-align: left;
+    letter-spacing: 0.17px !important;
+} */
+
+.spacer {
+    margin-top: 10px;
+}
+
+.spacer2x {
+    margin-top: 20px;
+}
+
+.accordion-body {
+
+    background: black;
+    /* padding: 5px 9px 7px 13px !important; */
+    color: white;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #FF7D6D !important;
+}
+
+.accordion-button {
+    color: white !important;
+    background-color: black !important;
+}
+
+.bd-placeholder-img {
+    font-size: 18px;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 18px;
+    }
+}
+
+.list {
+    font-family: 'SF-Pro-Text-Regular';
+    padding-left: 0px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.list-bullets {
+    line-height: 21px;
+    font-family: 'SF-Pro-Text-Regular';
+    padding-left: 19px;
+    margin: 0
+}
+
+.star {
+    background: url('https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/img/ct.png') no-repeat left top;
+    padding-top: 2px;
+    line-height: 22px;
+    /* height: 34px; */
+    padding-left: 19px;
+    font-size: 15px;
+}
+
+.star2 {
+    background: url('https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/img/tr.png') no-repeat left top;
+    padding-top: 2px;
+    line-height: 22px;
+    /* height: 34px; */
+    padding-left: 19px;
+    font-size: 15px;
+}

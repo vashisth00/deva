@@ -13,6 +13,11 @@ function getParameters() {
         "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Festivals/lanternSvgrepoCom.png";
     } else if (pair[1] == "0") {
       document.getElementById("demo").className = "dark";
+  document.getElementById("light-image1").src =
+        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Festivals/lanternSvgrepoCom.png";
+  document.getElementById("light-image2").src =
+        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Thumbs+up/invalidName-dark.png";
+
     }
   }
 }

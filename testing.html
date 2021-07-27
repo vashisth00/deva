@@ -1,105 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>How To Get URL Parameters using JavaScript?</title>
+  <title>dest_ideal_time</title>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="./styles-2.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/" rel="canonical">
   </head>
-
-  <body onload="getParameters() ">
-    <p id="demo" onload="getParameters() ">No Light Mode</p>
-
-    <p id="demo1" onload="getParameters() ">No Light Mode</p>
-
-    <script>
-      function getParameters() {
-        let urlString = window.location.href;
-
-        let paramString = urlString.split("?")[1];
-
-        let params_arr = paramString.split("&");
-
-        for (let i = 0; i < params_arr.length; i++) {
-          let pair = params_arr[i].split("=");
-
-          console.log("Key is:" + pair[0]);
-          console.log("Value is:" + pair[1]);
-          document.getElementById("demo").innerHTML = pair[1];
-          document.getElementById("demo1").innerHTML = pair[0];
-        }
-      }
-    </script>
-    <script>
-      function getParameter() {
-        let urlString =
-          "https://www.example.com/login.php?a=GeeksForGeeks&b=500&c=Hello Geeks";
-
-        let paramString = urlString.split("?")[1];
-
-        let params_arr = paramString.split("&");
-
-        for (let i = 0; i < params_arr.length; i++) {
-          let pair = params_arr[i].split("=");
-
-          console.log("Key is:" + pair[0]);
-          console.log("Value is:" + pair[1]);
-        }
-      }
-
-      function getAllUrlParams(url) {
-        var queryString = url
-          ? url.split("?")[1]
-          : window.location.search.slice(1);
-        var obj = {};
-
-        if (queryString) {
-          queryString = queryString.split("#")[0];
-          var arr = queryString.split("&");
-
-          for (var i = 0; i < arr.length; i++) {
-            var a = arr[i].split("=");
-            var paramName = a[0];
-            var paramValue = typeof a[1] === "undefined" ? true : a[1];
-
-            paramName = paramName.toLowerCase();
-            if (typeof paramValue === "string")
-              paramValue = paramValue.toLowerCase();
-
-            if (paramName.match(/\[(\d+)?\]$/)) {
-              var key = paramName.replace(/\[(\d+)?\]/, "");
-              if (!obj[key]) obj[key] = [];
-
-              if (paramName.match(/\[\d+\]$/)) {
-                var index = /\[(\d+)\]/.exec(paramName)[1];
-                obj[key][index] = paramValue;
-              } else {
-                obj[key].push(paramValue);
-              }
-            } else {
-              if (!obj[paramName]) {
-                obj[paramName] = paramValue;
-              } else if (obj[paramName] && typeof obj[paramName] === "string") {
-                obj[paramName] = [obj[paramName]];
-                obj[paramName].push(paramValue);
-              } else {
-                obj[paramName].push(paramValue);
-              }
-            }
-          }
-        }
-
-        return obj;
-      }
-
-      var params = document.getElementById("params");
-      var results = document.getElementById("results");
-
-      document.querySelector("input").addEventListener("keyup", function () {
-        params.innerText = this.value;
-        results.innerText = JSON.stringify(
-          getAllUrlParams("http://test.com/?" + this.value),
-          null,
-          2
-        );
-      });
-    </script>
+  <body id="demo"  onload="getParameters() ">
+    <div>
+      <span class="left-text">Jun - Aug, 14°C - 30°C, High Season</span>
+      <div class="spacer"></div>
+      <div class="grid-layout">
+        <span class="grid-left-text boldT">
+        <span> <img id="light-image1" src="https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Festivals/lanternSvgrepoCom.png"></span>
+        </span>
+        <span class="grid-right-text">Castelronda</span>
+      </div>
+      <div class="spacer"></div>
+      <div class="grid-layout">
+        <span class="grid-left-text boldT">
+          <img src="">
+        </span>
+        <span class="grid-right-text">Sightseeing, Outdoors, Good Weather</span>
+      </div>
+    </div>
   </body>
+<script src="./index.js"></script>
 </html>
