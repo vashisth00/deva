@@ -72,13 +72,9 @@
 }
 
 .white-mode {
-    width: 300px;
-    height: 100px;
     background-color: #f3f3f3;
-    text-align: center;
     font-size: 25px;
     color: white;
-    margin-bottom: 10px;
 }
 
 .white-mode > div > .left-text{
@@ -89,13 +85,8 @@
 }
 
 .dark {
-    width: 300px;
-    height: 100px;
     background-color: black;
-    text-align: center;
-    font-size: 25px;
     color: white;
-    margin-bottom: 10px;
 }
 
 
@@ -193,8 +184,6 @@ p {
 }
 
 .accordion-body {
-
-    background: black;
     /* padding: 5px 9px 7px 13px !important; */
     color: white;
 }
