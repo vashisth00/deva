@@ -77,6 +77,14 @@
     color: white;
 }
 
+.white-mode > div > .grid-left-text {
+color: black;
+}
+
+.white-mode > div > .grid-right-text {
+color: black;
+}
+
 .white-mode > div > .left-text{
     color: black;
 }
