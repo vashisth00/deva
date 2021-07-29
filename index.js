@@ -11,6 +11,8 @@ function getParameters() {
       document.getElementById("demo").className = "white-mode";
       document.getElementById("light-image1").src =
         "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Festivals/lanternSvgrepoCom-dark.png";
+document.getElementsByClassName("light-image1").src =
+        "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Festivals/lanternSvgrepoCom-dark.png";
       document.getElementById("light-image2").src =
         "https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/assets/Thumbs+up/invalidName-dark.png";
     } else if (pair[1] == "0") {
