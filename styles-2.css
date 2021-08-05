@@ -73,13 +73,18 @@
 
 .white-mode {
     background-color: #f3f3f3;
-    font-size: 25px;
+    /* font-size: 25px; */
     color: white;
 }
 
 .white-mode > div > .grid-left-text {
 color: black;
 }
+
+.white-mode > .accordion-body > ul > li {
+    color: black;
+}
+
 
 .white-mode > div > .grid-right-text {
 color: black;
@@ -91,6 +96,25 @@ color: black;
 .white-mode > div > .grid-layout > .grid-right-text{
     color: black;
 }
+.white-mode > div > .grid-layout > .grid-left-text{
+    color: black;
+}
+.white-mode > div > .linked{
+    color: #4ea69d;
+}
+.white-mode > div > .grid-layout > .grid-right-text > .linked{
+    color: #4ea69d;
+}
+
+.white-mode > div > .accordion-body > .list-bullets {
+    color: black;
+}
+
+.white-mode > div > .accordion-body > .list {
+    color: black;
+}
+
+
 
 .dark {
     background-color: black;
@@ -114,11 +138,11 @@ a {
     line-height: 21px;
     letter-spacing: -0.27px;
     text-decoration: none !important;
-    color: #3E827B;
+    color: #4ea69d;
 }
 
 .linked {
-    color: #3E827B;
+    color: #4ea69d;
 }
 
 .boldT {
@@ -222,6 +246,7 @@ p {
 .list {
     font-family: 'SF-Pro-Text-Regular';
     padding-left: 0px;
+    line-height: 108% !important;
     margin: 0;
     list-style-type: none;
 }
@@ -234,18 +259,16 @@ p {
 }
 
 .star {
-    background: url('https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/img/ct.png') no-repeat left top;
-    padding-top: 2px;
-    line-height: 22px;
+    background: url('https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/controller/assets/correct_tick-height0new.png') no-repeat left top;
+    padding-top: 5px;
     /* height: 34px; */
     padding-left: 19px;
     font-size: 15px;
 }
 
 .star2 {
-    background: url('https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/test/img/tr.png') no-repeat left top;
-    padding-top: 2px;
-    line-height: 22px;
+    background: url('https://vidzee.s3.ap-south-1.amazonaws.com/data/content/html/controller/assets/incorrect_cross-height.png') no-repeat left top;
+     padding-top: 5px;
     /* height: 34px; */
     padding-left: 19px;
     font-size: 15px;
